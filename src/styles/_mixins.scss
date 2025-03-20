@@ -1,0 +1,30 @@
+@mixin lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin interaction {
+  @media(min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media(max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin xsContainer {
+  @media(max-width: 740px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media(max-width: 560px) {
+    @content;
+  }
+}
+// Отредачить
