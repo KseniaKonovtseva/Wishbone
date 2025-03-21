@@ -1,5 +1,5 @@
 doctype html
-html(lang="ru")
+html(lang="en")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -11,18 +11,193 @@ html(lang="ru")
     link(rel="stylesheet", href="main.min.css")
     script(defer src="app.js")
   body
-    header.header 
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quis facilis accusamus! Quos, aut quaerat! Suscipit animi perspiciatis ipsam quo consequatur magnam pariatur consectetur nostrum blanditiis, nulla, ea harum qui.
+    header.header.container 
+      .header__logo 
+        a(href="index.html").header__logo-link
+          img(src="images/logo.svg").logo
+
+      .header__nav 
+        nav.nav 
+          ul.nav__list 
+            li.nav__list-item
+              a.nav__list-link(href="#") Projects
+            li.nav__list-item
+              a.nav__list-link(href="#") About
+            li.nav__list-item
+              a.nav__list-link(href="#") News
+            li.nav__list-item
+              a.nav__list-link(href="#") Team
+            li.nav__list-item
+              a.nav__list-link(href="#") Contact
+            li.nav__list-item
+              button.nav__list-btn.btn Get template
     main
-      section.section 
+      section.section__hero 
+        .section__hero-left 
+          .section__hero-left--wrapper 
+            h3.hero__subheading Wishbone+Partners
+            h1.hero__heading The home of beautiful architecture.
+            p.hero__descr We are an architecture firm with a focus on beautiful but functional design. At its heart, we believe design is about usability and accessibility — these are the guiding principles for our work. Read more about our previous projects, our process and our team below.
+            a.hero__link(href="#") Read more
+
+        .section__hero-right 
+          //- img(src="/images/Hero.png", alt="image").hero__img
+
+      section.section__about 
+        .section__about-left 
+          h2.about__heading Our firm
+        .section__about-right
+          p.about__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+          p.about__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+          p.about__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+          .about__author.team__person
+            .team__person-right
+              img(src="/images/Team1.png", alt="Stephen Collier Senior Partner")
+            .team__person-left 
+              span.team__person-name Stephen Collier
+              span.team__person-position Senior Partner
+
+      section.section__example1 
+        .example__container.example__container-right 
+          .example__content-wrapper
+            h4.example__heading Reeding House
+            p.example__descr Lorem ipsum dolor sit amet, dolor sit amet dolor sit amet.
+
+      section.section__process.container 
+        h3.process__subheading Our process
+        h2.process__heading How we do what we do.
+        ul.process__list 
+          li.process__list-item 
+            svg.process__list-img
+              use(xlink:href="/images/sprite.svg#Sketching")
+            span.process__list-name Sketching
+            p.process__list-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut tristique libero. Nulla luctus sapien ac arcu tempor, vitae tempor leo iaculis.
+          li.process__list-item 
+            svg.process__list-img
+              use(xlink:href="/images/sprite.svg#Finalizing")
+            span.process__list-name Finalizing
+            p.process__list-descr Adipiscing elit. Nulla ut tristique libero. Nulla vitae tempor leo iaculis luctus sapien ac arcu tempor, vitae.
+          li.process__list-item 
+            svg.process__list-img
+              use(xlink:href="/images/sprite.svg#Building")
+            span.process__list-name Building
+            p.process__list-descr Nulla ut tristique libero. Lorem ipsum ut tristique libero. Nulla luctus sapien ac arcu tempor, vitae lorem ipsum dolor leo iaculis.
+
+      section.section__example2 
+        .example__container.example__container-right 
+          .example__content-wrapper
+            h4.example__heading The marble staircase
+            p.example__descr Lorem ipsum dolor sit amet, dolor sit amet dolor sit amet.
+
+      section.section__customers
+        .container.customers__container
+          .customers__left 
+            h3.customers__subheading prior clients
+            h2.customers__heading Happy customers.
+            p.customers__descr Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula. Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.
+          .customers__right
+            ul.customers__list 
+              li.customers__list-item 
+                svg.customers__list-img
+                  use(xlink:href="/images/sprite.svg#Customer1")
+              li.customers__list-item 
+                svg.customers__list-img
+                  use(xlink:href="/images/sprite.svg#Customer2")
+              li.customers__list-item 
+                svg.customers__list-img
+                  use(xlink:href="/images/sprite.svg#Customer3")
+              li.customers__list-item 
+                svg.customers__list-img
+                  use(xlink:href="/images/sprite.svg#Customer4")
+
+      section.section__example3 
+        .example__container.example__container-left
+          .example__content-wrapper
+            h4.example__heading The swirling staircase
+            p.example__descr Lorem ipsum dolor sit amet, dolor sit amet dolor sit amet.
+
+      section.section__projects 
+        .container 
+          h2.projects__heading Featured projects
+          p.projects__descr Some of the latest and greatest projects from us here at 
+            span.no-wrap Wishbone+Partners.
+          .projects__grid 
+            .project__img 
+              img(src="/images/Projects1.png", alt="Project1")
+            .project__img 
+              img(src="/images/Projects2.png", alt="Project2")
+              .projects__overlay 
+                span.overlay__place New York
+                span.overlay__name Big Road Brewery
+              a.btn.overlay__link Read more
+            .project__img 
+              img(src="/images/Projects3.png", alt="Project3")
+          a.progects__link(href="#") View all projects
+
+      section.section__team 
+        .container.section__team-container 
+          .section__team-left 
+            h2.team__heading Meet our team
+            p.team__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis.
+            a.team__link See team
+          ul.section__team-right
+            li.team__person
+              .team__person-right
+                img(src="/images/Team1.png", alt="Stephen Collier Senior Partner")
+              .team__person-left 
+                span.team__person-name Stephen Collier
+                span.team__person-position Senior Partner
+            li.team__person
+              .team__person-right
+                img(src="/images/Team2.png", alt="Ferris Wonder Associate Partner")
+              .team__person-left 
+                span.team__person-name Ferris Wonder
+                span.team__person-position Associate Partner
+            li.team__person
+              .team__person-right
+                img(src="/images/Team3.png", alt="Niko Ferry Partner")
+              .team__person-left 
+                span.team__person-name Niko Ferry
+                span.team__person-position Partner
+            li.team__person
+              .team__person-right
+                img(src="/images/Team4.png", alt="Nolan Peters Associate")
+              .team__person-left 
+                span.team__person-name Nolan Peters
+                span.team__person-position Associate
+            li.team__person
+              .team__person-right
+                img(src="/images/Team5.png", alt="Aria Stone Senior Partner")
+              .team__person-left 
+                span.team__person-name Aria Stone
+                span.team__person-position Senior Partner
 
     footer.footer
-      
+      .footer__top 
+        .container.footer__top-container
+          .footer__top-left 
+            span.footer__top-descr Get in touch
+            h2.footer__top-heading Think we would be a good fit for your next project?
+          .footer__top-right
+            a(href="#").footer__top-link Get in touch
 
-
-
-
-
-
-
-
+      .footer__bottom.container
+        .footer__bottom-left 
+          a(href="index.html").footer__logo-link
+            img(src="images/logo.svg").logo
+          p.footer__bottom-rights Powered by Webflow <br> All rights reserved Wishbone+Partners, Inc.Licensing
+        .footer__bottom-right 
+          ul.footer__list 
+              li.footer__list-item 
+                a.footer__list-link
+                  svg.footer__list-img
+                    use(xlink:href="/images/sprite.svg#tw")
+              li.footer__list-item 
+                a.footer__list-link
+                  svg.footer__list-img
+                    use(xlink:href="/images/sprite.svg#inst")
+              li.footer__list-item 
+                a.footer__list-link
+                  svg.footer__list-img
+                    use(xlink:href="/images/sprite.svg#fb")
+          
